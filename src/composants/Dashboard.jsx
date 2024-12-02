@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-
 import Apple from './images/Apple-watch.jpg';
 
 function Dashboard() {

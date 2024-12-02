@@ -17,9 +17,7 @@ const Products = () => {
         </div>
       </div>
 
-      {/* Products Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* Product Card 1 */}
         <div className="bg-white rounded-lg shadow overflow-hidden">
           <div className="p-4">
             <div className="relative mb-4">
@@ -48,7 +46,6 @@ const Products = () => {
           </div>
         </div>
 
-        {/* Product Card 2 */}
         <div className="bg-white rounded-lg shadow overflow-hidden">
           <div className="p-4">
             <div className="relative mb-4">
@@ -75,7 +72,6 @@ const Products = () => {
           </div>
         </div>
 
-        {/* Product Card 3 */}
         <div className="bg-white rounded-lg shadow overflow-hidden">
           <div className="p-4">
             <div className="relative mb-4">

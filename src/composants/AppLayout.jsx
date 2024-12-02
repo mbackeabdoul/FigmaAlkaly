@@ -103,9 +103,7 @@ const AppLayout = () => {
         </header>
       </aside>
 
-      {/* Main Content */}
       <div className="flex flex-col flex-1 overflow-hidden">
-        {/* Your existing navbar goes here */}
         <nav className="bg-white border-b w-full">
           <div className="flex items-center justify-between px-2 md:px-6 py-2 md:py-4">
             <div className="hidden md:block flex-1 max-w-xl mx-8">
@@ -143,7 +141,6 @@ const AppLayout = () => {
           </div>
         </nav>
 
-        {/* Main content area */}
         <main className="flex-1 overflow-y-auto bg-gray-50">
           <Routes>
             <Route path="/" element={<Dashboard />} />
@@ -152,7 +149,6 @@ const AppLayout = () => {
         </main>
       </div>
 
-      {/* Mobile menu button */}
       <button
         className="fixed left-2 top-0 z-30 md:hidden p-2"
         onClick={toggleSidebar}
@@ -160,7 +156,6 @@ const AppLayout = () => {
         <span className="text-3xl">☰</span>
       </button>
 
-      {/* Mobile overlay */}
       {isSidebarOpen && (
         <div
           className="fixed inset-0 bg-black opacity-50 z-30 md:hidden"
