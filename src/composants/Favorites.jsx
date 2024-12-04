@@ -18,7 +18,7 @@ const Favorites = () => {
       </div> */}
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-white rounded-lg shadow overflow-hidden">
+        <div className="bg-white rounded-lg shadow">
           <div className="p-4">
             <div className="relative mb-4">
               <img

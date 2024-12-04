@@ -25,7 +25,7 @@ function Dashboard() {
   };
 
   return (
-    <div className="flex h-screen overflow-hidden">
+    <div className="flex">
       {/* <aside 
         className={`
           fixed md:static top-0 left-0 z-40 w-60 bg-white h-full overflow-y-auto 

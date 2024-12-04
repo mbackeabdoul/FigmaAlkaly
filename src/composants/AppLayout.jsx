@@ -17,7 +17,7 @@ const AppLayout = () => {
   return (
     <div className="flex h-screen overflow-hidden">
       <aside
-        className={`fixed md:static top-0 left-0 z-40 w-60 bg-white h-full overflow-y-auto 
+        className={`fixed md:static top-0 left-0 z-40 w-60 bg-white h-full
           transform transition-transform duration-300 ease-in-out 
           ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} 
           md:translate-x-0
@@ -132,7 +132,7 @@ const AppLayout = () => {
           </div>
         </nav>
 
-        <main className="flex-1 overflow-y-auto bg-gray-50"> {/* Add overflow-y-auto for main content */}
+        <main className="flex-1 overflow-y-auto bg-gray-50">
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/products" element={<Products />} />
