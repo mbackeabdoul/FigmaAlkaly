@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import Dashboard from './Dashboard';
 import Products from './Products';
+import Favorites from './Favorites';
+import Inbox from './Inbox';
 import women from './images/women.png';
 import drapeau from './images/drapeau.png';
 
@@ -14,9 +16,8 @@ const AppLayout = () => {
 
   return (
     <div className="flex h-screen overflow-hidden">
-      <aside 
-        className={`
-          fixed md:static top-0 left-0 z-40 w-60 bg-white h-full overflow-y-auto 
+      <aside
+        className={`fixed md:static top-0 left-0 z-40 w-60 bg-white h-full overflow-y-auto 
           transform transition-transform duration-300 ease-in-out 
           ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} 
           md:translate-x-0
@@ -33,77 +34,67 @@ const AppLayout = () => {
           </Link>
           <Link to="/products" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
             <span className="mr-3">📦</span>
-            Products 
+            Products
           </Link>
-          <a href="#" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
+
+          <Link to="/favorites" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
             <span className="mr-3">❤️</span>
             Favorites
-          </a>
-          <a href="#" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
-            <span className="mr-3">📨</span>
-            Inbox
-          </a>
-          <a href="#" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
+          </Link>
+          <Link to="/inbox" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
+  <span className="mr-3">📧</span>
+  Inbox
+</Link>
+          <Link to="#" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
             <span className="mr-3">📝</span>
             Order Lists
-          </a>
-          <a href="#" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
+          </Link>
+          <Link to="#" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
             <span className="mr-3">📈</span>
             Product Stock
-          </a>
+          </Link>
 
-             <div className="mt-8">
+          <div className="mt-8">
             <span className="px-4 text-xs font-semibold text-gray-500 uppercase">Pages</span>
             <div className="mt-4">
-              <a href="#" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
+              <Link to="#" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
                 <span className="mr-3">💰</span>
                 Pricing
-              </a>
-              <a href="#" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
+              </Link>
+              <Link to="#" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
                 <span className="mr-3">📅</span>
                 Calendar
-              </a>
-              <a href="#" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
+              </Link>
+              <Link to="#" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
                 <span className="mr-3">✅</span>
                 To-Do
-              </a>
-              <a href="#" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
+              </Link>
+              <Link to="#" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
                 <span className="mr-3">📞</span>
                 Contact
-              </a>
-              <a href="#" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
+              </Link>
+              <Link to="#" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
                 <span className="mr-3">📄</span>
                 Invoice
-              </a>
-              <a href="#" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
-                <span className="mr-3">✅</span>
-                To-Do
-              </a>
-              <a href="#" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
-                <span className="mr-3">📞</span>
-                Contact
-              </a>
-              <a href="#" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
-                <span className="mr-3">📄</span>
-                Invoice
-              </a>
+              </Link>
             </div>
           </div>
 
           <div className="mt-8">
             <div className="mt-4">
-              <a href="#" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
+              <Link to="#" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
                 <span className="mr-3">⚙️</span> Settings
-              </a>
-              <a href="#" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
+              </Link>
+              <Link to="#" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
                 <span className="mr-3">🚪</span> Logout
-              </a>
+              </Link>
             </div>
           </div>
+
         </header>
       </aside>
 
-      <div className="flex flex-col flex-1 overflow-hidden">
+      <div className="flex flex-col flex-1 overflow-hidden"> {/* Main content, no extra overflow */}
         <nav className="bg-white border-b w-full">
           <div className="flex items-center justify-between px-2 md:px-6 py-2 md:py-4">
             <div className="hidden md:block flex-1 max-w-xl mx-8">
@@ -141,10 +132,13 @@ const AppLayout = () => {
           </div>
         </nav>
 
-        <main className="flex-1 overflow-y-auto bg-gray-50">
+        <main className="flex-1 overflow-y-auto bg-gray-50"> {/* Add overflow-y-auto for main content */}
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/favorites" element={<Favorites />} />
+            <Route path="/inbox" element={<Inbox />} />
+
           </Routes>
         </main>
       </div>

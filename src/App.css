@@ -1,0 +1,18 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Empêche le défilement sur l'ensemble de la page */
+}
+
+#root {
+  height: 100%; /* Assurez-vous que la div root prend toute la hauteur de la fenêtre */
+}
+
+/* .flex-1 {
+  overflow-y-auto; /* Permet le défilement uniquement dans la partie principale */
+/* } */ */
+
+.overflow-hidden {
+  overflow: hidden; /* Empêche les barres de défilement supplémentaires */
+}
