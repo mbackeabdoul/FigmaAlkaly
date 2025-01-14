@@ -15,9 +15,9 @@ const AppLayout = () => {
   };
 
   return (
-    <div className="flex h-screen overflow-hidden">
+    <div className="flex h-screen">
       <aside
-        className={`fixed md:static top-0 left-0 z-40 w-60 bg-white h-full
+        className={`fixed md:static top-0 left-0 z-40 w-60 bg-white h-full 
           transform transition-transform duration-300 ease-in-out 
           ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} 
           md:translate-x-0
@@ -42,9 +42,9 @@ const AppLayout = () => {
             Favorites
           </Link>
           <Link to="/inbox" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
-  <span className="mr-3">📧</span>
-  Inbox
-</Link>
+            <span className="mr-3">📧</span>
+              Inbox
+              </Link>
           <Link to="#" className="flex items-center px-4 py-2 mb-1 text-gray-600 hover:bg-gray-50 rounded-lg">
             <span className="mr-3">📝</span>
             Order Lists
@@ -94,7 +94,7 @@ const AppLayout = () => {
         </header>
       </aside>
 
-      <div className="flex flex-col flex-1 overflow-hidden"> {/* Main content, no extra overflow */}
+      <div className="flex flex-col flex-1">
         <nav className="bg-white border-b w-full">
           <div className="flex items-center justify-between px-2 md:px-6 py-2 md:py-4">
             <div className="hidden md:block flex-1 max-w-xl mx-8">
@@ -132,7 +132,7 @@ const AppLayout = () => {
           </div>
         </nav>
 
-        <main className="flex-1 overflow-y-auto bg-gray-50">
+        <main className="flex-1  bg-gray-50"> {/* Add overflow-y-auto for main content */}
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/products" element={<Products />} />
